@@ -23,16 +23,15 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
-  background-color: #e8e8ea;
+  background-color: var(--bg-color);
 }
 
 .register-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-color);
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .register-container {
@@ -45,35 +44,6 @@ html {
   background: var(--white);
   box-shadow: 0px 5px 10px 5px rgba(89, 107, 158, 0.25);
   border-radius: 20px;
-}
-
-@media screen and (max-width: 640px) {
-  /* codes */
-  .register-container {
-    padding: 0 30px !important;
-    width: 100%;
-    height: 100%;
-  }
-
-  .register-container .register-back__btn {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  /* codes */
-  .register-container .register-sso {
-    flex-flow: column wrap;
-  }
-  .register-container .register-sso__btn {
-    flex: 1 0 100% !important;
-    width: 100%;
-  }
-  .register-form__group .register-form__input {
-    flex: 1 0 100% !important;
-  }
 }
 
 .register-back__btn {
@@ -371,4 +341,49 @@ html {
 
 .register-login-link a {
   color: var(--blue);
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    background-color: var(--white);
+  }
+
+  .register-wrapper {
+    display: flex;
+    height: auto;
+  }
+
+  .register-container {
+    padding: 50px 30px !important;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .register-container .register-back__btn {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-height: 640px) {
+  .register-wrapper {
+    display: flex;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* codes */
+  .register-container .register-sso {
+    flex-flow: column wrap;
+  }
+  .register-container .register-sso__btn {
+    flex: 1 0 100% !important;
+    width: 100%;
+  }
+  .register-form__group .register-form__input {
+    flex: 1 0 100% !important;
+  }
 }
