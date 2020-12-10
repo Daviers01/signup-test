@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Developer Task</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <div class="register-wrapper">
+            <div class="register-container">
+                <a href="#" class="register-back__btn">&#8592;Back</a>
+                <div class="register-header">Start from free <span class="highlight">Create an account</span>
+                </div>
+                <div class="register-sso">
+                    <div class="register-sso__btn">
+                        <img class="register-sso__img" alt="google logo" src="./images/google.png" />
+                        <span class="register-sso__text">Sign up with Google</span>
+                    </div>
+                    <div class="register-sso__btn">
+                        <img class="register-sso__img" alt="facebook logo" src="./images/facebook.png" />
+                        <span class="register-sso__text">Sign up with Facebook</span>
+                    </div>
+                </div>
+                <div class="register-divider">
+                    <span class="register-divider__text">Or use your email for registration</span>
+                </div>
+
+                <form class="register-form">
+                    <div class="register-form__group">
+                        <div class="register-form__input">
+                            <input id="first-name" type="text" name="first-name" required />
+                            <label for="first-name">First Name</label>
+                        </div>
+                        <div class="register-form__input">
+                            <input id="last-name" type="text" name="last-name" required />
+                            <label for="last-name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="register-form__input">
+                        <input id="email-address" type="email" name="email-address" required />
+                        <label for="email-address">Email</label>
+                    </div>
+                    <div class="register-form__input">
+                        <input id="password" type="password" name="password" required />
+                        <label for="password">Password</label>
+                        <!-- eye toggler -->
+                        <input id="pw-toggler" class="pw-toggler" type="radio">
+                        <label id="pw-toggler-btn" for="pw-toggler" class="pw-toggler-label">
+                            <img src="./images/view-hide.png" />
+                        </label>
+                    </div>
+
+                    <div id="pw-errors" class="register-form__errors">
+                        <div id="pw-error-min-char" class="register-form__error-msg">
+                            <span>&#10003;</span>8 Characters min.
+                        </div>
+                        <div id="pw-error-min-num" class="register-form__error-msg">
+                            <span>&#10003;</span>One number
+                        </div>
+                    </div>
+
+                    <div class="register-terms">
+                        <input type="checkbox" id="tnc" name="terms-and-conditions">
+                        <span class="register-terms__spiels">By creating account, you agree to accept our
+                            Privacy
+                            Policy, Terms of
+                            Service and Notification settings.</span>
+                    </div>
+
+                    <button class="register-form__submit">Create an Free Account!</button>
+                </form>
+
+                <div class="register-login-link">
+                    <span>Already have an account? <a href="#">Log in</a></span>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="./script.js"></script>
+        </div>
+    </body>
+
+</html>
